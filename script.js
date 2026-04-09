@@ -9,8 +9,8 @@
   "use strict";
 
   // ----- CONFIG (replace with your real IDs) -----
-  var HUBSPOT_PORTAL_ID = "YOUR_PORTAL_ID";
-  var HUBSPOT_FORM_ID = "YOUR_FORM_ID";
+  var HUBSPOT_PORTAL_ID = "22680279";
+  var HUBSPOT_FORM_ID = "83223ac9-61aa-47a8-a3d7-9fcc2c275d7a";
   var STORAGE_KEY = "gated_video_user";
 
   // ----- THEME TOKENS (Atomicwork) -----
