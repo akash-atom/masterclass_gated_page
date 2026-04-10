@@ -352,6 +352,25 @@
         }
       });
     });
+
+    // ----- CTA → VIDEO MIRROR CLICKS -----
+    var ctaMirrors = [
+      ["#cta-1", "#vid-1"],
+      ["#cta-2", "#vid-2"],
+      ["#cta-3", "#vid-3"],
+      ["#cta-4", "#vid-4"],
+    ];
+    ctaMirrors.forEach(function (pair) {
+      var cta = document.querySelector(pair[0]);
+      var vid = document.querySelector(pair[1]);
+      if (cta && vid) {
+        cta.addEventListener("click", function (e) {
+          e.preventDefault();
+          e.stopPropagation();
+          vid.click();
+        });
+      }
+    });
   }
 
   // Run on DOM ready
