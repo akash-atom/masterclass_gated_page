@@ -210,8 +210,8 @@
     wrap.className = "gvl-form-view";
 
     wrap.innerHTML =
-      "<h3>Watch this session</h3>" +
-      "<p>All sessions are live. Recordings available for registered attendees only.</p>" +
+      "<h3>Watch the entire series</h3>" +
+      "<p>All four sessions are now available on demand. Register to get instant access.</p>" +
       '<div class="gvl-field">' +
       '<label for="gvl-name">Name <span style="color:#dc3545">*</span></label>' +
       '<input type="text" id="gvl-name" placeholder="Your full name" autocomplete="name">' +
@@ -220,7 +220,7 @@
       '<label for="gvl-email">Work Email <span style="color:#dc3545">*</span></label>' +
       '<input type="email" id="gvl-email" placeholder="you@company.com" autocomplete="email">' +
       "</div>" +
-      '<button class="gvl-submit" type="button">Watch now \u2192</button>';
+      '<button class="gvl-submit" type="button">Access the replays \u2192</button>';
 
     modal.appendChild(wrap);
 
