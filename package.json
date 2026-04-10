@@ -1,6 +1,6 @@
 {
   "name": "@aw-webflow/masterclass_gated_page",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "",
   "scripts": {
     "start": "parcel script.js",
