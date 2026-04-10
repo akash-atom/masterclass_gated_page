@@ -47,16 +47,18 @@
   }
 
   function vimeoEmbedUrl(url) {
-    // Extract Vimeo ID from various URL formats
+    // Extract Vimeo ID and optional hash from various URL formats
+    // Handles: vimeo.com/ID/HASH?params, vimeo.com/video/ID/HASH, player.vimeo.com/video/ID
     var match = url.match(
-      /(?:vimeo\.com\/(?:video\/)?|player\.vimeo\.com\/video\/)(\d+)/
+      /(?:vimeo\.com\/(?:video\/)?|player\.vimeo\.com\/video\/)(\d+)(?:\/([a-f0-9]+))?/
     );
     if (!match) return url;
-    return (
-      "https://player.vimeo.com/video/" +
-      match[1] +
-      "?autoplay=1&title=0&byline=0&portrait=0"
-    );
+    var embedUrl = "https://player.vimeo.com/video/" + match[1] +
+      "?autoplay=1&title=0&byline=0&portrait=0";
+    if (match[2]) {
+      embedUrl += "&h=" + match[2];
+    }
+    return embedUrl;
   }
 
   // ----- STYLES (injected once) -----
